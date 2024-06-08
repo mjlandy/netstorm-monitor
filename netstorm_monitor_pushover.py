@@ -10,8 +10,8 @@ import requests  # Import for Pushover
 toaster = ToastNotifier()
 
 # Pushover API credentials
-pushover_user_key = 'uxxo'  # Replace with your Pushover user key
-pushover_api_token = 'awcoosexkdb714qwb7q'  # Replace with your Pushover API token
+pushover_user_key = 'your user key'  # Replace with your Pushover user key
+pushover_api_token = 'your api token'  # Replace with your Pushover API token
 
 # Function to send a Pushover notification
 def send_pushover_notification(title, message):
