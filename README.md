@@ -16,7 +16,7 @@ Symptoms and actions
 2. Two of my Ubiquiti Access points failed due to thermal issues (two of the 7 I have). Those two are both new U7-Pro models. They would appear offline, and attempts to reset and re-adopt fail. They were incredibly hot when touched (a clue - high processing load)
 3. Control4 itself a day after the audio and AP issues began to fail hard - house down! - Lights, TV, Audio, Locks, Alarm - nothing was working
 4. Rebooting it only gave me a few hours before it began again. This was the case Saturday into Sunday
-5. IT Magic occured Sunday at 8:35 AM ET
+5. IT Magic occured Sunday at 8:35 AM ET - and its been fine ever since. So, what happens on a time that is 0,15,30,45 minutes after an hour, and on a weekend... change controls.... (could be ?)
 
 Motivation for this repo
 1. I was looking for a way to build a wireshark capture in command line and automate it to output and alert - way too complex (for me)
