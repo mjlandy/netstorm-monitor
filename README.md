@@ -1,6 +1,6 @@
-Truly a first-world problem, but, a problem. My smart-house died, and so did some wifi, and audio streaming. I found the root cause, and now want to be alerted ahead of failure.
+Truly a first-world problem, but, a problem. My smart-house died a week ago (May 20 week approx), and so did some wifi, and audio streaming. I found the root cause, and now want to be alerted ahead of failure.
 
-The need to write this was from broadcast storms using MDNS and SSDP that came from a popular home automation platform (control4) the week of May 27
+The need to write this was from broadcast storms using MDNS and SSDP that came from a popular home automation platform (control4) the week of May 27. I call it a storm as you will read later
 
 Beginning, around Thursday that week, the core control4 "director" device would flood my LAN with UDP broadcast storms, at port 5353. Others were in there too like SSDP
 These appear to be periodic "discovery" probes to either aid in setup of devices, or figure out what else I have on the LAN ?!
