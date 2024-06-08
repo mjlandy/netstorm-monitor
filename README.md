@@ -1,11 +1,13 @@
+Truly a first-world problem, but, a problem. My smart-house died, and so did some wifi, and audio streaming. I found the root cause, and now want to be alerted ahead of failure.
+
 The need to write this was from broadcast storms using MDNS and SSDP that came from a popular home automation platform (control4) the week of May 27
-Beginning, I think, around Thursday that week, the core control4 controller would flood my LAN with UDP broadcast storms, at port 5353. Others where in there too like SSDP
+
+Beginning, around Thursday that week, the core control4 "director" device would flood my LAN with UDP broadcast storms, at port 5353. Others were in there too like SSDP
 These appear to be periodic "discovery" probes to either aid in setup of devices, or figure out what else I have on the LAN ?!
 I dont mind those so much and it usually does this about 1 or 2 times every 10 seconds
 
-The problem was the device was emitting MDNS broadcast packets at a rate of 1 every << 1ms. Thats over a 1,000 a second
-
 I eventually got wireshark out on my desktop and saw it
+The problem was the device was emitting MDNS broadcast packets at a rate of 1 every << 1ms. Thats over a 1,000 a second
 
 I used a LAN tap at the device emitting them to get everything else
 
@@ -13,10 +15,10 @@ No root cause from vendor yet, but, it magically started this on a Thursday and 
 
 Symptoms and actions
 1. Eversolo  audio streamer began to pop and distort (never does this) when using Tidal or Apple Music 
-2. Two of my Ubiquiti Access points failed due to thermal issues (two of the 7 I have). Those two are both new U7-Pro models. They would appear offline, and attempts to reset and re-adopt fail. They were incredibly hot when touched (a clue - high processing load)
+2. Two of my Ubiquiti Access points failed on Thursday at 4:15PM ET due to thermal and high CPU issues (two of the 7 I have). Those two are both new U7-Pro models. They would appear offline, and attempts to reset and re-adopt fail. They were incredibly hot when touched (a clue - high processing load)
 3. Control4 itself a day after the audio and AP issues began to fail hard - house down! - Lights, TV, Audio, Locks, Alarm - nothing was working
-4. Rebooting it only gave me a few hours before it began again. This was the case Saturday into Sunday
-5. IT Magic occured Sunday at 8:35 AM ET - and its been fine ever since. So, what happens on a time that is 0,15,30,45 minutes after an hour, and on a weekend... change controls.... (could be ?)
+4. Rebooting control4 only gave me a few hours before it began again. This was the case Saturday into Sunday
+5. "IT Magic" occured Sunday at 8:35 AM ET - and its been fine ever since. So, what happens on a time that is 0,15,30,45 minutes after an hour, and on a weekend... change controls.... (could be ?)
 
 Motivation for this repo
 1. I was looking for a way to build a wireshark capture in command line and automate it to output and alert - way too complex (for me)
