@@ -1,0 +1,4 @@
+Features
+
+http webhook call to control4 when alert occurs to trigger house wide announcement agent alerting the condition (while I still can)
+Another webhook for when alerts happen continuously for 15 minutes, to reboot control4, attempting to prolong the innevitable
