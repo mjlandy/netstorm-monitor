@@ -47,7 +47,7 @@ def log_to_csv(timestamp, total_packets, highest_src_ip, highest_count):
 
 # Define the capture function
 def capture_mdns_packets(interface, threshold, capture_duration):
-    packet_count = {}
+    packet_count = {} # dynamic dict
 
     def packet_callback(packet):
         # Get source IP address
